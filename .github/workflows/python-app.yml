@@ -26,7 +26,9 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          pip install flake8
+          flake8 . --exclude=venv --count --select=E9,F63,F7,F82 --show-source --statistics
+
 
       - name: Run unit tests
         run: |
