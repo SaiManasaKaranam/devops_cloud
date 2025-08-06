@@ -29,6 +29,8 @@ jobs:
         pip install flake8
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    - name: Run FastAPI app test
+    - name: Run unit tests
       run: |
-        echo "✅ No unit tests defined yet"
+        pip install pytest
+        pytest
+"
